@@ -8,7 +8,7 @@ Este es el portafolio de **Francis Annet Velásquez Santos**, estudiante de Inge
 - Tailwind CSS
 
 ## 📚 Cursos destacados
-- 💧 Hidrología
+- 💧 Topicos de produccion mas limpia 
 - 🌱 Tecnologías Limpias
 - ⚠️ Riesgos Ambientales
 
