@@ -62,13 +62,13 @@ export default function Home() {
             <p className="text-gris font-sans mt-4">
             Entre las herramientas más utilizadas se encuentran las auditorías ambientales y los diagnósticos de procesos, que permiten identificar oportunidades de mejora. Las técnicas incluyen la implementación de tecnologías limpias, el rediseño de productos y la aplicación de buenas prácticas de mantenimiento y operación. Estas acciones aseguran un control más eficiente de los impactos. Además, se utilizan indicadores de desempeño ambiental para medir avances y resultados, lo que facilita la toma de decisiones basadas en datos concretos.
             </p>
-           <h3 className="text-gris font-sans mt-6"
+           <h3 className="text-gris font-sans mt-6">
              Tema 5 – Implementación en la Industria
            </h3>
            <p className="text-gris font-sans mt-4">
               La implementación de la PML sigue un proceso estructurado: diagnóstico inicial, identificación de oportunidades, evaluación técnica y económica, aplicación de medidas y seguimiento. Este proceso requiere el compromiso de la gerencia y la participación activa de los trabajadores, ya que la cultura organizacional es clave para el éxito. Los casos de éxito en sectores como minería, agroindustria y textil demuestran que la PML no solo es viable, sino también rentable y beneficiosa para la sociedad en general.
              </p>
-           <h3 className="text-gris font-sans mt-6"
+           <h3 className="text-gris font-sans mt-6">
             Tema 6 –¿Qué establece la ISO 10628?
           </h3>
           <p className="text-gris font-sans mt-4">
