@@ -1,6 +1,9 @@
+"use client"; // necesario en Next.js App Router
+import { useState } from "react";
 import Image from "next/image";
 
 export default function Home() {
+  const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
   return (
     <main className="bg-fondo min-h-screen flex flex-col">
       {/* Hero inicial con imagen ambiental */}
@@ -29,12 +32,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección de cursos */}
-      <section
-        id="courses"
-        className="p-8 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-      >
-        <div className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer">
+     {/* Cursos */}
+      <section id="courses" className="p-8">
+        {/* Curso 1 */}
+        <div
+          onClick={() =>
+            setSelectedCourse(selectedCourse === "pml" ? null : "pml")
+          }
+          className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer mb-6"
+        >
           <h2 className="text-tierra font-serif text-lg mb-2 flex items-center gap-2">
             💧 Tópicos de produccion mas limpia 
           </h2>
@@ -74,22 +80,40 @@ export default function Home() {
           <p className="text-gris font-sans mt-4">
             La ISO 10628 es una norma internacional que establece las reglas para la elaboración de diagramas de flujo de procesos en ingeniería química e industrial. Su objetivo principal es garantizar que los procesos productivos se representen de manera clara, uniforme y comprensible en cualquier contexto. Esta norma define distintos tipos de diagramas, como los diagramas de bloques, los diagramas de flujo de procesos (PFD) y los diagramas de tuberías e instrumentación (P&ID). Cada uno cumple una función específica: los de bloques ofrecen una visión general, los PFD detallan equipos principales y corrientes de materiales, y los P&ID muestran conexiones, válvulas e instrumentos con precisión. En el marco de Producción Más Limpia, esta norma es fundamental porque permite visualizar de forma estandarizada dónde se generan residuos, emisiones o pérdidas de energía dentro de un proceso industrial. La aplicación de la ISO 10628 en Producción Más Limpia se centra en el diagnóstico ambiental de procesos. Al representar gráficamente cada etapa de producción, desde la entrada de materias primas hasta la salida de productos y residuos, se facilita la identificación de puntos críticos que requieren intervención. Por ejemplo, un PFD puede mostrar claramente dónde se desperdicia agua o energía, mientras que un P&ID permite localizar etapas que generan emisiones contaminantes o residuos peligrosos. Esta representación estandarizada no solo ayuda a los ingenieros y técnicos a comprender el proceso, sino que también facilita la comunicación con auditores ambientales y equipos internacionales, asegurando que todos trabajen con un mismo lenguaje visual. Los beneficios de aplicar la ISO 10628 en el contexto de Producción Más Limpia son múltiples. En primer lugar, aporta claridad visual y estandarización, evitando confusiones y asegurando que los diagramas sean interpretados de manera uniforme en cualquier país o sector. En segundo lugar, sirve como base para auditorías y certificaciones ambientales, ya que los diagramas cumplen con estándares reconocidos internacionalmente. Además, estos diagramas son herramientas esenciales para la mejora continua, pues permiten aplicar balances de masa y energía, identificar cuellos de botella y proponer soluciones preventivas. En definitiva, la ISO 10628 convierte los diagramas de flujo en una herramienta estratégica para implementar Producción Más Limpia de manera efectiva, integrando la gestión ambiental con la ingeniería de procesos.
             </p>
+              {/* Aquí agregas los demás temas */}
+          )}
         </div>
-        <div className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer">
+       {/* Curso 2 */}
+        <div
+          onClick={() =>
+            setSelectedCourse(selectedCourse === "riesgos" ? null : "riesgos")
+          }
+          className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer"
+        >
           <h2 className="text-tierra font-serif text-lg mb-2 flex items-center gap-2">
             🌱 Tecnologías Limpias
           </h2>
           <p className="text-gris font-sans">
             Innovaciones para reducir impactos ambientales.
           </p>
+              {/* Aquí agregas los demás temas */}
+          )}
         </div>
-        <div className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer">
+        {/* Curso 3 */}
+        <div
+          onClick={() =>
+            setSelectedCourse(selectedCourse === "tec" ? null : "tec")
+          }
+          className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer mb-6"
+        >
           <h2 className="text-tierra font-serif text-lg mb-2 flex items-center gap-2">
             ⚠️ Riesgos Ambientales
           </h2>
           <p className="text-gris font-sans">
             Evaluación y mitigación de riesgos ecológicos.
-          </p>
+         </p>
+              {/* Aquí agregas los demás temas */}
+          )}
         </div>
       </section>
 
