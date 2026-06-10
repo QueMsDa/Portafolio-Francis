@@ -1,5 +1,7 @@
 ﻿"use client"; // necesario en Next.js App Router
 
+import { useState } from "react";
+
 const unidades = [
   {
     id: "unidad-1",
@@ -68,15 +70,22 @@ const unidades = [
   {
     id: "unidad-2",
     title: "Unidad 2",
-    subtitle: "Balance de Materia y Energía",
+    subtitle: "Balance de materia y energía en procesos industriales",
     image: "/docs/unidad-2/grafico-balance-materia.png",
     summary:
-      "Analizar el balance de materia y energía en procesos industriales, para reducir pérdidas, hacer un mejor uso de recursos y mejorar la eficiencia sostenible.",
+      "Explorar cómo cada proceso industrial es un flujo de masa y energía que debe cerrarse. Desde comprender entradas, salidas y pérdidas hasta visualizar cómo estos factores impactan la eficiencia y sostenibilidad operativa, esta unidad transforma la visión técnica de una planta industrial.",
     temas: [
-      "Balance de materia: entradas, salidas y acumulación.",
-      "Balance de energía y eficiencia de procesos.",
-      "Residuos, indicadores y controles de operación.",
-      "Responsabilidad social y análisis crítico de resultados.",
+      "Balance de materia y energía: Entiende cómo cada entrada, salida y pérdida afecta la eficiencia y sostenibilidad de una planta industrial.",
+      "Ejercicios de balance: Entrena tu mente para desmontar problemas complejos en bloques más simples y encuentra soluciones paso a paso con enfoque ambiental.",
+      "Caso de estudio Vietnam: Aprende a adaptar conceptos técnicos a condiciones específicas de contextos reales y desarrolla tu mirada crítica sobre procesos industriales.",
+      "Balance de materia y PML: Integra eficiencia técnica con prevención ambiental para proponer soluciones que reduzcan residuos y aprovechen mejor la materia prima.",
+      "Análisis PINCH: Identifica oportunidades de ahorro energético y plantea mejoras concretas en intercambios térmicos para procesos sostenibles.",
+      "Taller de balance por sector industrial: Compara cómo funcionan los balances en distintas áreas y aprende a trabajar con información real de planta.",
+      "Taller grupal Cusco Vietnam: Interpreta resultados en equipo y mejora tu capacidad de comunicación técnica y presentación de recomendaciones.",
+      "Investigación II: Organiza datos concretos, documenta hallazgos y elabora informes técnicos basados en evidencia clara.",
+      "Responsabilidad social II: Integra consideraciones sociales y éticas en proyectos técnicos para garantizar sostenibilidad holística.",
+      "Evaluación grupal: Demuestra tu aprendizaje, coordina con el equipo y comunica intentos técnicos con estructura y claridad.",
+      "Gráfico de Balance de Materia: Visualiza el comportamiento real de procesos complejos através de representaciones gráficas que facilitan el análisis.",
     ],
     docs: [
       {
@@ -84,58 +93,121 @@ const unidades = [
         href: "/docs/unidad-2/balance-materia.pdf",
       },
       {
+        label: "Ejercicios de balance de materia y energía",
+        href: "/docs/unidad-2/ejercicios-balance-petroquimico.pdf",
+      },
+      {
         label: "Caso de estudio Vietnam",
         href: "/docs/unidad-2/caso-vietnam.pdf",
       },
       {
-        label: "Thermal Integration in Sugar Production Using Pinch",
-        href: "/docs/unidad-2/thermal-integration-sugar-pinch.pdf",
+        label: "Artículo BMyE y PML",
+        href: "/docs/unidad-2/if-segunda-unidad-tecnologias-limpias.pdf",
       },
       {
-        label: "Ejercicios de Balance por Sector Petroquímico",
+        label: "Thermal Integration in Sugar Production Using Pinch",
+        href: "/docs/unidad-2/if-tec.pdf",
+      },
+      {
+        label: "Taller Petroquímico",
         href: "/docs/unidad-2/ejercicios-balance-petroquimico.pdf",
       },
       {
-        label: "Responsabilidad Social (1)",
-        href: "/docs/unidad-2/responsabilidad-social-1.pdf",
+        label: "Taller Cusco Vietnam",
+        href: "/docs/unidad-2/caso-vietnam.pdf",
       },
       {
-        label: "Examen grupal",
+        label: "Investigación II (PDF)",
+        href: "/docs/unidad-2/if-segunda-unidad-tecnologias-limpias.pdf",
+      },
+      {
+        label: "Tabla IF (XLSX)",
+        href: "/docs/unidad-2/if-de-tecnologias-segunda-unidad.xlsx",
+      },
+      {
+        label: "Responsabilidad Social II",
+        href: "/docs/unidad-2/responsabilidad-social-ii.pdf",
+      },
+      {
+        label: "Evaluación Grupal",
         href: "/docs/unidad-2/examen-grupal.pdf",
+      },
+      {
+        label: "Gráfico de Balance de Materia",
+        href: "/docs/unidad-2/grafico-balance-materia.png",
       },
     ],
   },
   {
     id: "unidad-3",
     title: "Unidad 3",
-    subtitle: "Diagramas de Flujo y Procesos",
+    subtitle: "Implementación de Producción Más Limpia",
     summary:
-      "Explorar diagramas de flujo, normas internacionales y herramientas de visualización para diseñar procesos industriales más claros y menos contaminantes.",
+      "Aprende cómo implementar programas de Producción Más Limpia (PML) en tu industria. Desde evaluar la factibilidad técnica y económica hasta aplicar normas internacionales de gestión energética, esta unidad te capacita para transformar procesos en sistemas sostenibles y eficientes.",
     temas: [
-      "Diagramas de flujo y procesos industriales.",
-      "Norma ISO 10628 para diagramas de procesos.",
-      "Identificación de puntos críticos y oportunidades de mejora.",
+      "Implementación PML: Pasos prácticos y estratégicos para llevar la teoría a la realidad operativa.",
+      "Factibilidad Técnica y Económica: Analiza viabilidad de mejoras considerando recursos y costos reales.",
+      "Guía de Implementación PML 2da versión INACAL: Metodología oficial para programas sostenibles.",
+      "Mejoras Técnicas en Gestión de Energía: Optimiza eficiencia energética en sectores industriales.",
+      "ISO 50001: Norma internacional para sistemas de gestión de energía en tu organización.",
+      "Caso de Estudio Curtiembre Piel Inka: Aplicación real de PML en industria de curtiembre.",
     ],
     docs: [
       {
-        label: "Diagrama de flujo Flexicoking",
-        href: "/docs/unidad-3/diagrama-flujo-flexicoking.pdf",
+        label: "Implementación PML",
+        href: "/docs/unidad-3/implementacion-pml.pptx",
       },
       {
-        label: "ISO 10628 - Diagramas de procesos",
-        href: "/docs/unidad-3/iso-10628-diagramas-procesos.pdf",
+        label: "Factibilidad Técnica y Económica",
+        href: "/docs/unidad-3/factibilidad-tecnica-economica.pdf",
       },
       {
-        label: "PL3.1",
-        href: "/docs/unidad-3/pl3-1.pdf",
+        label: "Guía Implementación PML 2da versión INACAL",
+        href: "/docs/unidad-3/guia-implementacion-pml-inacal.pdf",
+      },
+      {
+        label: "Mejoras Técnicas en Gestión de Energía y Eficiencia Energética",
+        href: "/docs/unidad-3/mejoras-tecnicas-gestion-energia.pdf",
+      },
+      {
+        label: "ISO 50001 - Guía de Implementación",
+        href: "/docs/unidad-3/iso-50001-guia.pdf",
+      },
+      {
+        label: "Caso Curtiembre Piel Inka",
+        href: "/docs/unidad-3/piel-inka.pdf",
       },
     ],
   },
 ];
 
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#1f1129] via-[#3b1d4f] to-[#120818] text-white">
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-h-[90vh] max-w-[90vw]" onClick={(e: React.MouseEvent) => e.stopPropagation()}>
+            <img
+              src={selectedImage}
+              alt="Imagen amplificada"
+              className="h-full w-full object-contain"
+            />
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30"
+              aria-label="Cerrar"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(168,85,247,0.22),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.18),_transparent_30%)]" />
         <div className="relative mx-auto flex min-h-[58vh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center">
@@ -197,7 +269,7 @@ export default function Home() {
               </div>
 
               {unidad.image && (
-                <div className="mt-6 overflow-hidden rounded-3xl border border-pink-400/10 bg-slate-950/90">
+                <div className="mt-6 overflow-hidden rounded-3xl border border-pink-400/10 bg-slate-950/90 cursor-pointer transition hover:shadow-lg hover:shadow-pink-500/30" onClick={() => setSelectedImage(unidad.image)}>
                   <img
                     src={unidad.image}
                     alt={`Imagen de ${unidad.title}`}
