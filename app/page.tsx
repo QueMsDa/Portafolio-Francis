@@ -11,10 +11,12 @@ const unidades = [
     summary:
       "Comprender el marco y el porqué de las tecnologías limpias, y ver cómo se aplican en industrias químicas, petroquímicas e hidrocarburos para reducir residuos y consumo energético.",
     temas: [
-      "Marco conceptual de tecnologías limpias.",
-      "Prevención de residuos y producción más limpia.",
-      "Aplicaciones en industrias químicas, petroquímicas e hidrocarburos.",
-      "Lectura postulada, cuaderno y caso de estudio.",
+      "Marco conceptual de tecnologías limpias: Comprende el propósito y evolución de las tecnologías limpias, su importancia en procesos industriales y cómo transforman la sostenibilidad desde la teoría hasta la práctica.",
+      "Prevención de residuos y producción más limpia: Aprende estrategias para evitar la generación de residuos desde el origen, integrando eficiencia ambiental en cada etapa del proceso productivo.",
+      "Aplicaciones en industrias químicas, petroquímicas e hidrocarburos: Explora casos reales de cómo las tecnologías limpias se adaptan y funcionan en sectores industriales específicos con desafíos ambientales complejos.",
+      "Línea de tiempo y evolución histórica: Analiza cómo han evolucionado las prácticas de producción limpia en la química y petroquímica, entendiendo el contexto que llevó a las normativas actuales.",
+      "Cuaderno de referencia y lectura postulada: Desarrolla una base sólida de conocimientos fundamentales con material especializado que conecta teoría ambiental con aplicación industrial.",
+      "Taller grupal y casos de estudio: Aplica lo aprendido en equipos multidisciplinarios, analizando problemas reales y generando soluciones prácticas con enfoque sostenible.",
     ],
     docs: [
       {
@@ -48,22 +50,6 @@ const unidades = [
       {
         label: "Gráfico de balance de materia",
         href: "/docs/unidad-1/grafico-balance-materia.png",
-      },
-      {
-        label: "IF segunda unidad tecnologías limpias",
-        href: "/docs/unidad-1/if-segunda-unidad-tecnologias-limpias.pdf",
-      },
-      {
-        label: "IF TEC",
-        href: "/docs/unidad-1/if-tec.pdf",
-      },
-      {
-        label: "Responsabilidad Social II",
-        href: "/docs/unidad-1/responsabilidad-social-ii.pdf",
-      },
-      {
-        label: "Presentación PL2",
-        href: "/docs/unidad-1/pl2-26.pptx",
       },
     ],
   },
@@ -145,12 +131,14 @@ const unidades = [
     summary:
       "Aprende cómo implementar programas de Producción Más Limpia (PML) en tu industria. Desde evaluar la factibilidad técnica y económica hasta aplicar normas internacionales de gestión energética, esta unidad te capacita para transformar procesos en sistemas sostenibles y eficientes.",
     temas: [
-      "Implementación PML: Pasos prácticos y estratégicos para llevar la teoría a la realidad operativa.",
-      "Factibilidad Técnica y Económica: Analiza viabilidad de mejoras considerando recursos y costos reales.",
-      "Guía de Implementación PML 2da versión INACAL: Metodología oficial para programas sostenibles.",
-      "Mejoras Técnicas en Gestión de Energía: Optimiza eficiencia energética en sectores industriales.",
-      "ISO 50001: Norma internacional para sistemas de gestión de energía en tu organización.",
-      "Caso de Estudio Curtiembre Piel Inka: Aplicación real de PML en industria de curtiembre.",
+      "Implementación PML: Descubre los pasos prácticos y estratégicos para convertir programas de Producción Más Limpia de la teoría a la realidad operativa en tu industria.",
+      "Factibilidad Técnica y Económica: Desarrolla capacidad de análisis para evaluar viabilidad de mejoras ambientales considerando recursos disponibles, costos reales y retorno de inversión.",
+      "Guía de Implementación PML INACAL: Estudia la metodología oficial del Instituto Nacional de Calidad para programas sostenibles, asegurando cumplimiento normativo y efectividad.",
+      "Mejoras Técnicas en Gestión de Energía: Identifica oportunidades de optimización energética en sistemas industriales y propuestas concretas de eficiencia energética por sector.",
+      "ISO 50001 - Sistemas de Gestión de Energía: Aprende la norma internacional para estructurar sistemas de gestión de energía en organizaciones, mejorando desempeño ambiental y económico.",
+      "Pinch Analysis y Recuperación Térmica: Aplica técnicas de análisis PINCH para identificar oportunidades de integración térmica y ahorro energético en procesos complejos.",
+      "Caso de Estudio Curtiembre Piel Inka: Analiza aplicación real de PML en industria de curtiembre, observando cómo se combinan mejoras técnicas con responsabilidad social y sostenibilidad.",
+      "Evaluación de Viabilidad Económica: Desarrolla habilidades para calcular costos de implementación, beneficios ambientales cuantificables y justificación financiera de proyectos de mejora.",
     ],
     docs: [
       {
