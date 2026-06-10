@@ -43,6 +43,26 @@ const unidades = [
         label: "Presentación PL4",
         href: "/docs/unidad-1/pl4.pdf",
       },
+      {
+        label: "Gráfico de balance de materia",
+        href: "/docs/unidad-1/grafico-balance-materia.png",
+      },
+      {
+        label: "IF segunda unidad tecnologías limpias",
+        href: "/docs/unidad-1/if-segunda-unidad-tecnologias-limpias.pdf",
+      },
+      {
+        label: "IF TEC",
+        href: "/docs/unidad-1/if-tec.pdf",
+      },
+      {
+        label: "Responsabilidad Social II",
+        href: "/docs/unidad-1/responsabilidad-social-ii.pdf",
+      },
+      {
+        label: "Presentación PL2",
+        href: "/docs/unidad-1/pl2-26.pptx",
+      },
     ],
   },
   {
@@ -64,36 +84,24 @@ const unidades = [
         href: "/docs/unidad-2/balance-materia.pdf",
       },
       {
-        label: "Gráfico de balance de materia",
-        href: "/docs/unidad-2/grafico-balance-materia.png",
-      },
-      {
-        label: "Ejercicios de balance petroquímico",
-        href: "/docs/unidad-2/ejercicios-balance-petroquimico.pdf",
-      },
-      {
-        label: "IF de Tecnologías segunda unidad",
-        href: "/docs/unidad-2/if-segunda-unidad-tecnologias-limpias.pdf",
-      },
-      {
-        label: "IF TEC",
-        href: "/docs/unidad-2/if-tec.pdf",
-      },
-      {
-        label: "Responsabilidad Social II",
-        href: "/docs/unidad-2/responsabilidad-social-ii.pdf",
-      },
-      {
-        label: "Examen grupal",
-        href: "/docs/unidad-2/examen-grupal.pdf",
-      },
-      {
         label: "Caso de estudio Vietnam",
         href: "/docs/unidad-2/caso-vietnam.pdf",
       },
       {
-        label: "Presentación PL2",
-        href: "/docs/unidad-2/pl2-26.pptx",
+        label: "Thermal Integration in Sugar Production Using Pinch",
+        href: "/docs/unidad-2/thermal-integration-sugar-pinch.pdf",
+      },
+      {
+        label: "Ejercicios de Balance por Sector Petroquímico",
+        href: "/docs/unidad-2/ejercicios-balance-petroquimico.pdf",
+      },
+      {
+        label: "Responsabilidad Social (1)",
+        href: "/docs/unidad-2/responsabilidad-social-1.pdf",
+      },
+      {
+        label: "Examen grupal",
+        href: "/docs/unidad-2/examen-grupal.pdf",
       },
     ],
   },
@@ -221,35 +229,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <p className="mt-5 text-sm text-slate-400">
-                Carpeta: <span className="font-semibold text-pink-200">public/docs/{unidad.id}/</span>
-              </p>
             </article>
           ))}
-        </div>
-
-        <div className="mt-12 rounded-[2rem] border border-pink-400/10 bg-white/5 p-8 text-slate-200 shadow-2xl shadow-pink-500/10">
-          <h4 className="text-2xl font-semibold text-white">¿Dónde subir mis documentos?</h4>
-          <p className="mt-4 text-slate-300">
-            Coloca tus archivos dentro de las carpetas correctas para que los enlaces funcionen y la página quede con la organización igual al ejemplo.
-          </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-pink-500/10 bg-pink-500/10 p-4 text-sm text-pink-100">
-              <strong>Unidad 1</strong>
-              <p className="mt-2 text-slate-300">public/docs/unidad-1/</p>
-            </div>
-            <div className="rounded-2xl border border-pink-500/10 bg-pink-500/10 p-4 text-sm text-pink-100">
-              <strong>Unidad 2</strong>
-              <p className="mt-2 text-slate-300">public/docs/unidad-2/</p>
-            </div>
-            <div className="rounded-2xl border border-pink-500/10 bg-pink-500/10 p-4 text-sm text-pink-100">
-              <strong>Unidad 3</strong>
-              <p className="mt-2 text-slate-300">public/docs/unidad-3/</p>
-            </div>
-          </div>
-          <p className="mt-5 text-sm text-slate-400">
-            Si cambias el nombre de los archivos, actualiza los enlaces dentro de <code className="rounded bg-slate-900 px-1 py-0.5">app/page.tsx</code>.
-          </p>
         </div>
       </section>
     </main>
