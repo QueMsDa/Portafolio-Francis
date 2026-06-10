@@ -4,13 +4,15 @@ const unidades = [
   {
     id: "unidad-1",
     title: "Unidad 1",
+    subtitle: "Tecnologías Limpias en los Procesos Industriales",
     image: "/docs/unidad-1/evaluacion-grupal.jpg",
     summary:
-      "Esta unidad presenta los conceptos básicos de tecnologías limpias y cómo se aplican en procesos industriales para reducir residuos y consumo de energía.",
+      "Comprender el marco y el porqué de las tecnologías limpias, y ver cómo se aplican en industrias químicas, petroquímicas e hidrocarburos para reducir residuos y consumo energético.",
     temas: [
-      "Concepto y beneficios de las tecnologías limpias.",
-      "Producción más limpia y prevención de residuos.",
-      "Buenas prácticas en procesos de separación y reacción.",
+      "Marco conceptual de tecnologías limpias.",
+      "Prevención de residuos y producción más limpia.",
+      "Aplicaciones en industrias químicas, petroquímicas e hidrocarburos.",
+      "Lectura postulada, cuaderno y caso de estudio.",
     ],
     docs: [
       {
@@ -22,26 +24,39 @@ const unidades = [
         href: "/docs/unidad-1/lectura-pml.pdf",
       },
       {
-        label: "Artículo BMy E y PML",
+        label: "Artículo BMyE y PML",
         href: "/docs/unidad-1/articulo-bmye-pml.pdf",
       },
       {
-        label: "Línea de tiempo química y petroquímica",
+        label: "Línea de tiempo química petroquímica",
         href: "/docs/unidad-1/linea-tiempo-quimica-petroquimica.pdf",
       },
+      {
+        label: "Grupo 4 - Taller 1",
+        href: "/docs/unidad-1/grupo-4-taller-1.pdf",
+      },
+      {
+        label: "Presentación PL1",
+        href: "/docs/unidad-1/pl1.pptx",
+      },
+      {
+        label: "Presentación PL4",
+        href: "/docs/unidad-1/pl4.pdf",
+      },
     ],
-    groupWork: "Línea de tiempo química y petroquímica - primer trabajo grupal del Grupo 4",
   },
   {
     id: "unidad-2",
     title: "Unidad 2",
+    subtitle: "Balance de Materia y Energía",
     image: "/docs/unidad-2/grafico-balance-materia.png",
     summary:
-      "En esta unidad se analiza el balance de materia y cómo optimizar recursos para construir procesos más eficientes y responsables.",
+      "Analizar el balance de materia y energía en procesos industriales, para reducir pérdidas, hacer un mejor uso de recursos y mejorar la eficiencia sostenible.",
     temas: [
       "Balance de materia: entradas, salidas y acumulación.",
-      "Evaluación de pérdidas y oportunidades de mejora.",
-      "Uso de gráficos y diagramas para la toma de decisiones.",
+      "Balance de energía y eficiencia de procesos.",
+      "Residuos, indicadores y controles de operación.",
+      "Responsabilidad social y análisis crítico de resultados.",
     ],
     docs: [
       {
@@ -49,29 +64,49 @@ const unidades = [
         href: "/docs/unidad-2/balance-materia.pdf",
       },
       {
-        label: "Ejercicios de balance por sector petroquímico",
+        label: "Gráfico de balance de materia",
+        href: "/docs/unidad-2/grafico-balance-materia.png",
+      },
+      {
+        label: "Ejercicios de balance petroquímico",
         href: "/docs/unidad-2/ejercicios-balance-petroquimico.pdf",
       },
       {
-        label: "IF segunda unidad tecnologías limpias",
+        label: "IF de Tecnologías segunda unidad",
         href: "/docs/unidad-2/if-segunda-unidad-tecnologias-limpias.pdf",
       },
       {
-        label: "PL2 26",
+        label: "IF TEC",
+        href: "/docs/unidad-2/if-tec.pdf",
+      },
+      {
+        label: "Responsabilidad Social II",
+        href: "/docs/unidad-2/responsabilidad-social-ii.pdf",
+      },
+      {
+        label: "Examen grupal",
+        href: "/docs/unidad-2/examen-grupal.pdf",
+      },
+      {
+        label: "Caso de estudio Vietnam",
+        href: "/docs/unidad-2/caso-vietnam.pdf",
+      },
+      {
+        label: "Presentación PL2",
         href: "/docs/unidad-2/pl2-26.pptx",
       },
     ],
-    groupWork: "Documento de análisis de balance de materia para Proyecto PL2",
   },
   {
     id: "unidad-3",
     title: "Unidad 3",
+    subtitle: "Diagramas de Flujo y Procesos",
     summary:
-      "Esta unidad muestra cómo los diagramas de flujo y normas internacionales ayudan a visualizar procesos y encontrar mejoras ambientales.",
+      "Explorar diagramas de flujo, normas internacionales y herramientas de visualización para diseñar procesos industriales más claros y menos contaminantes.",
     temas: [
-      "Diagrama de bloques, PFD y P&ID.",
-      "Norma ISO 10628 y su aplicación.",
-      "Identificación de puntos críticos para evitar desperdicios.",
+      "Diagramas de flujo y procesos industriales.",
+      "Norma ISO 10628 para diagramas de procesos.",
+      "Identificación de puntos críticos y oportunidades de mejora.",
     ],
     docs: [
       {
@@ -79,7 +114,7 @@ const unidades = [
         href: "/docs/unidad-3/diagrama-flujo-flexicoking.pdf",
       },
       {
-        label: "Norma ISO 10628",
+        label: "ISO 10628 - Diagramas de procesos",
         href: "/docs/unidad-3/iso-10628-diagramas-procesos.pdf",
       },
       {
@@ -87,7 +122,6 @@ const unidades = [
         href: "/docs/unidad-3/pl3-1.pdf",
       },
     ],
-    groupWork: "PL3 – Diagramas de flujo de procesos",
   },
 ];
 
@@ -95,26 +129,26 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#1f1129] via-[#3b1d4f] to-[#120818] text-white">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,105,180,0.25),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.22),_transparent_30%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(168,85,247,0.22),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(56,189,248,0.18),_transparent_30%)]" />
         <div className="relative mx-auto flex min-h-[58vh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center">
-          <p className="mb-4 text-sm uppercase tracking-[0.4em] text-pink-300/80">
-            Tecnologías Limpias para una mujer empoderada
-          </p>
-          <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-pink-100 sm:text-5xl md:text-6xl">
+          <p className="mb-4 text-sm uppercase tracking-[0.4em] text-cyan-200/80">
             Tecnologías Limpias en los Procesos Industriales
+          </p>
+          <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
+            Curso de Tecnologías Limpias en los Procesos Industriales
           </h1>
-          <p className="mx-auto mt-6 max-w-3xl text-base text-slate-200/80 sm:text-lg">
-            Una propuesta moderna, femenina y poderosa para presentar tus unidades con el mismo estilo y títulos del ejemplo.
+          <p className="mx-auto mt-6 max-w-3xl text-base text-slate-300/90 sm:text-lg">
+            Un resumen organizado de las unidades, contenidos y documentos reales de tu curso, con enlaces directos a los apuntes dentro de public/docs.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
               href="#unidades"
-              className="rounded-full bg-pink-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-500/30 transition hover:bg-pink-400"
+              className="rounded-full bg-cyan-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/30 transition hover:bg-cyan-400"
             >
               Ver unidades
             </a>
-            <span className="rounded-full border border-pink-400/40 bg-white/5 px-5 py-3 text-sm text-pink-100">
-              Estilo femenino y profesional
+            <span className="rounded-full border border-cyan-400/40 bg-white/5 px-5 py-3 text-sm text-cyan-100">
+              Organización de contenidos reales
             </span>
           </div>
         </div>
@@ -141,10 +175,10 @@ export default function Home() {
             >
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.35em] text-pink-200/80">{unidad.title}</p>
-                  <h3 className="mt-3 text-2xl font-semibold text-white">Tecnologías Limpias en los Procesos Industriales</h3>
+                  <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/80">{unidad.title}</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">{unidad.subtitle}</h3>
                 </div>
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-500/10 text-xl text-pink-100">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-xl text-cyan-100">
                   {unidad.title.split(" ")[1]}
                 </span>
               </div>
