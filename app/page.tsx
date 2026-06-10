@@ -1,137 +1,191 @@
-"use client"; // necesario en Next.js App Router
-import { useState } from "react";
-import Image from "next/image";
+﻿"use client"; // necesario en Next.js App Router
+
+const unidades = [
+  {
+    id: "unidad-1",
+    title: "Unidad 1",
+    summary:
+      "Esta unidad presenta los conceptos básicos de tecnologías limpias y cómo se aplican en procesos industriales para reducir residuos y consumo de energía.",
+    temas: [
+      "Concepto y beneficios de las tecnologías limpias.",
+      "Producción más limpia y prevención de residuos.",
+      "Buenas prácticas en procesos de separación y reacción.",
+    ],
+    docs: [
+      {
+        label: "Apuntes del cuaderno",
+        href: "/docs/unidad-1/apuntes-cuaderno.pdf",
+      },
+      {
+        label: "Evidencias de aprendizaje",
+        href: "/docs/unidad-1/evidencias-aprendizaje.pdf",
+      },
+    ],
+    groupWork: "Línea de tiempo química y petroquímica - primer trabajo grupal del Grupo 4",
+  },
+  {
+    id: "unidad-2",
+    title: "Unidad 2",
+    summary:
+      "En esta unidad se analiza el balance de materia y cómo optimizar recursos para construir procesos más eficientes y responsables.",
+    temas: [
+      "Balance de materia: entradas, salidas y acumulación.",
+      "Evaluación de pérdidas y oportunidades de mejora.",
+      "Uso de gráficos y diagramas para la toma de decisiones.",
+    ],
+    docs: [
+      {
+        label: "Gráfico de balance de materia",
+        href: "/docs/unidad-2/balance-materia.pdf",
+      },
+      {
+        label: "Apuntes de clase",
+        href: "/docs/unidad-2/apuntes-clase.pdf",
+      },
+    ],
+    groupWork: "Documento de análisis de balance de materia para Proyecto PL2",
+  },
+  {
+    id: "unidad-3",
+    title: "Unidad 3",
+    summary:
+      "Esta unidad muestra cómo los diagramas de flujo y normas internacionales ayudan a visualizar procesos y encontrar mejoras ambientales.",
+    temas: [
+      "Diagrama de bloques, PFD y P&ID.",
+      "Norma ISO 10628 y su aplicación.",
+      "Identificación de puntos críticos para evitar desperdicios.",
+    ],
+    docs: [
+      {
+        label: "Diagrama de flujo de procesos",
+        href: "/docs/unidad-3/diagrama-flujo.pdf",
+      },
+      {
+        label: "Resumen ISO 10628",
+        href: "/docs/unidad-3/iso-10628.pdf",
+      },
+    ],
+    groupWork: "PL3 – Diagramas de flujo de procesos",
+  },
+];
 
 export default function Home() {
-  const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
   return (
-    <main className="bg-fondo min-h-screen flex flex-col">
-      {/* Hero inicial con imagen ambiental */}
-      <section className="relative h-[70vh] flex items-center justify-center text-center text-crema">
-        <Image
-          src="/hero-naturaleza.jpg" // coloca tu imagen en la carpeta /public
-          alt="Naturaleza"
-          fill
-          priority
-          className="object-cover brightness-75"
-        />
-        <div className="relative z-10">
-          <h1 className="text-5xl font-serif mb-4">
-            Francis Annet Velásquez Santos
+    <main className="min-h-screen bg-gradient-to-b from-[#1f1129] via-[#3b1d4f] to-[#120818] text-white">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,105,180,0.25),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.22),_transparent_30%)]" />
+        <div className="relative mx-auto flex min-h-[58vh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center">
+          <p className="mb-4 text-sm uppercase tracking-[0.4em] text-pink-300/80">
+            Tecnologías Limpias para una mujer empoderada
+          </p>
+          <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-pink-100 sm:text-5xl md:text-6xl">
+            Tecnologías Limpias en los Procesos Industriales
           </h1>
-          <p className="text-xl mb-6">
-            Ingeniería Ambiental — Comprometida con la sostenibilidad y las
-            tecnologías limpias
+          <p className="mx-auto mt-6 max-w-3xl text-base text-slate-200/80 sm:text-lg">
+            Una propuesta moderna, femenina y poderosa para presentar tus unidades con el mismo estilo y títulos del ejemplo.
           </p>
-          <a
-            href="#courses"
-            className="bg-crema text-tierra px-6 py-3 rounded-lg shadow hover:bg-arena hover:text-texto transition"
-          >
-            Ver mis cursos
-          </a>
+          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a
+              href="#unidades"
+              className="rounded-full bg-pink-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-500/30 transition hover:bg-pink-400"
+            >
+              Ver unidades
+            </a>
+            <span className="rounded-full border border-pink-400/40 bg-white/5 px-5 py-3 text-sm text-pink-100">
+              Estilo femenino y profesional
+            </span>
+          </div>
         </div>
       </section>
 
-     {/* Cursos */}
-      <section id="courses" className="p-8">
-        {/* Curso 1 */}
-         <div
-          onClick={() =>
-          setSelectedCourse(selectedCourse === "pml" ? null : "pml")
-          }
-          className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer mb-6"
-          >
-          <h2 className="text-tierra font-serif text-lg mb-2 flex items-center gap-2">
-            💧 Tópicos de produccion mas limpia 
-          </h2>
-           {selectedCourse === "pml" && (
-            <>
-            <h3 className="text-gris font-sans mt-6">
-            Tema 1 – Concepto de Producción Más Limpia
-            </h3>
-            <p className="text-gris font-sans mt-4">
-            La Producción Más Limpia (PML) es una estrategia ambiental preventiva que busca reducir los impactos negativos desde el origen del proceso productivo. A diferencia de los enfoques tradicionales que se centran en el tratamiento de residuos, la PML actúa antes de que estos se generen. Este concepto se aplica tanto a procesos industriales como a productos y servicios, promoviendo un diseño más sostenible y responsable. La idea central es que la prevención es más eficiente y menos costosa que la corrección posterior. En el ámbito académico, comprender este concepto es esencial porque constituye la base de todas las prácticas y metodologías que se desarrollan en las siguientes unidades de estudio..
-            </p>
-            <h3 className="text-gris font-sans mt-6">
-            Tema 2 – Principios Fundamentales
-            </h3>
-            <p className="text-gris font-sans mt-4">
-            Los principios de la PML se centran en la prevención, la eficiencia y la sustitución de insumos peligrosos. La prevención implica anticiparse a los problemas ambientales antes de que ocurran. La eficiencia busca optimizar el uso de recursos como agua, energía y materias primas, reduciendo costos y emisiones. La sustitución, por su parte, propone reemplazar materiales tóxicos por alternativas más seguras y sostenibles. Estos principios no son aislados, sino complementarios: juntos forman un marco integral que guía la implementación de la PML en cualquier sector productivo.
-            </p>
-            <h3 className="text-gris font-sans mt-6">
-            Tema 3 – Beneficios Ambientales y Económicos
-             </h3>
-             <p className="text-gris font-sans mt-4">
-            La PML ofrece beneficios ambientales claros, como la reducción de emisiones contaminantes y la disminución de residuos sólidos. Esto contribuye directamente a la conservación de ecosistemas y a la salud pública. En el plano económico, las empresas que aplican PML reducen costos operativos gracias al menor consumo de recursos y al aprovechamiento de subproductos. Además, mejoran su competitividad en el mercado. Un beneficio adicional es la mejora de la imagen corporativa, ya que las organizaciones que adoptan prácticas sostenibles generan confianza y aceptación social.
-             </p>
-            <h3 className="text-gris font-sans mt-6">
-            Tema 4 – Herramientas y Técnicas de PML
-             </h3>
-            <p className="text-gris font-sans mt-4">
-            Entre las herramientas más utilizadas se encuentran las auditorías ambientales y los diagnósticos de procesos, que permiten identificar oportunidades de mejora. Las técnicas incluyen la implementación de tecnologías limpias, el rediseño de productos y la aplicación de buenas prácticas de mantenimiento y operación. Estas acciones aseguran un control más eficiente de los impactos. Además, se utilizan indicadores de desempeño ambiental para medir avances y resultados, lo que facilita la toma de decisiones basadas en datos concretos.
-            </p>
-           <h3 className="text-gris font-sans mt-6">
-             Tema 5 – Implementación en la Industria
-           </h3>
-           <p className="text-gris font-sans mt-4">
-              La implementación de la PML sigue un proceso estructurado: diagnóstico inicial, identificación de oportunidades, evaluación técnica y económica, aplicación de medidas y seguimiento. Este proceso requiere el compromiso de la gerencia y la participación activa de los trabajadores, ya que la cultura organizacional es clave para el éxito. Los casos de éxito en sectores como minería, agroindustria y textil demuestran que la PML no solo es viable, sino también rentable y beneficiosa para la sociedad en general.
-             </p>
-           <h3 className="text-gris font-sans mt-6">
-            Tema 6 –¿Qué establece la ISO 10628?
-          </h3>
-          <p className="text-gris font-sans mt-4">
-            La ISO 10628 es una norma internacional que establece las reglas para la elaboración de diagramas de flujo de procesos en ingeniería química e industrial. Su objetivo principal es garantizar que los procesos productivos se representen de manera clara, uniforme y comprensible en cualquier contexto. Esta norma define distintos tipos de diagramas, como los diagramas de bloques, los diagramas de flujo de procesos (PFD) y los diagramas de tuberías e instrumentación (P&ID). Cada uno cumple una función específica: los de bloques ofrecen una visión general, los PFD detallan equipos principales y corrientes de materiales, y los P&ID muestran conexiones, válvulas e instrumentos con precisión. En el marco de Producción Más Limpia, esta norma es fundamental porque permite visualizar de forma estandarizada dónde se generan residuos, emisiones o pérdidas de energía dentro de un proceso industrial. La aplicación de la ISO 10628 en Producción Más Limpia se centra en el diagnóstico ambiental de procesos. Al representar gráficamente cada etapa de producción, desde la entrada de materias primas hasta la salida de productos y residuos, se facilita la identificación de puntos críticos que requieren intervención. Por ejemplo, un PFD puede mostrar claramente dónde se desperdicia agua o energía, mientras que un P&ID permite localizar etapas que generan emisiones contaminantes o residuos peligrosos. Esta representación estandarizada no solo ayuda a los ingenieros y técnicos a comprender el proceso, sino que también facilita la comunicación con auditores ambientales y equipos internacionales, asegurando que todos trabajen con un mismo lenguaje visual. Los beneficios de aplicar la ISO 10628 en el contexto de Producción Más Limpia son múltiples. En primer lugar, aporta claridad visual y estandarización, evitando confusiones y asegurando que los diagramas sean interpretados de manera uniforme en cualquier país o sector. En segundo lugar, sirve como base para auditorías y certificaciones ambientales, ya que los diagramas cumplen con estándares reconocidos internacionalmente. Además, estos diagramas son herramientas esenciales para la mejora continua, pues permiten aplicar balances de masa y energía, identificar cuellos de botella y proponer soluciones preventivas. En definitiva, la ISO 10628 convierte los diagramas de flujo en una herramienta estratégica para implementar Producción Más Limpia de manera efectiva, integrando la gestión ambiental con la ingeniería de procesos.
-            </p>
-              {/* Aquí sigues con Tema 3, Tema 4, etc. */}
-            </>
-            )}
-        </div>
-       {/* Curso 2 */}
-        <div
-        onClick={() =>
-          setSelectedCourse(selectedCourse === "pml" ? null : "pml")
-            }
-          className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer mb-6"
-          >
-          <h2 className="text-tierra font-serif text-lg mb-2 flex items-center gap-2">
-            🌱 Tecnologías Limpias
-          </h2>
-          {selectedCourse === "pml" && (
-          <>
-          <p className="text-gris font-sans">
-            Innovaciones para reducir impactos ambientales.
+      <section id="unidades" className="mx-auto max-w-7xl px-6 py-14">
+        <div className="mb-12 text-center">
+          <p className="text-sm uppercase tracking-[0.3em] text-pink-200/80">
+            Curso en 3 unidades
           </p>
-             {/* Aquí sigues con Tema 3, Tema 4, etc. */}
-            </>
-            )}
-        </div>
-        {/* Curso 3 */}
-       <div
-        onClick={() =>
-          setSelectedCourse(selectedCourse === "pml" ? null : "pml")
-          }
-          className="bg-crema shadow-md rounded-lg p-6 hover:scale-105 transition-transform cursor-pointer mb-6"
-          >
-          <h2 className="text-tierra font-serif text-lg mb-2 flex items-center gap-2">
-            ⚠️ Riesgos Ambientales
+          <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
+            Tecnologías Limpias en los Procesos Industriales
           </h2>
-         {selectedCourse === "pml" && (
-        <>
-          <p className="text-gris font-sans">
-            Evaluación y mitigación de riesgos ecológicos.
-         </p>
-              {/* Aquí agregas los demás temas */}
-          )}
+          <p className="mx-auto mt-4 max-w-2xl text-slate-300">
+            Mira cada unidad organizada como en la página que mostraste: títulos claros, tarjetas con contenido y enlaces directos a los documentos.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-3">
+          {unidades.map((unidad) => (
+            <article
+              key={unidad.id}
+              className="rounded-[2rem] border border-pink-400/10 bg-white/5 p-6 shadow-2xl shadow-pink-500/10 backdrop-blur-xl transition hover:-translate-y-1"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.35em] text-pink-200/80">{unidad.title}</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">Tecnologías Limpias en los Procesos Industriales</h3>
+                </div>
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-500/10 text-xl text-pink-100">
+                  {unidad.title.split(" ")[1]}
+                </span>
+              </div>
+
+              <div className="mt-6 rounded-[1.75rem] border border-pink-400/10 bg-pink-500/10 p-5">
+                <p className="text-sm font-semibold text-pink-100">Resumen rápido</p>
+                <p className="mt-3 text-slate-200">{unidad.summary}</p>
+              </div>
+
+              <div className="mt-6 space-y-3">
+                {unidad.temas.map((tema) => (
+                  <div key={tema} className="rounded-2xl border border-pink-400/10 bg-slate-950/90 p-4 text-sm text-slate-200">
+                    {tema}
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 rounded-[1.75rem] border border-pink-400/10 bg-slate-950/90 p-5">
+                <h4 className="text-sm font-semibold text-pink-100">Documentos</h4>
+                <div className="mt-4 space-y-3">
+                  {unidad.docs.map((doc) => (
+                    <a
+                      key={doc.href}
+                      href={doc.href}
+                      className="block rounded-2xl border border-pink-500/10 bg-pink-500/10 px-4 py-3 text-sm font-semibold text-white transition hover:bg-pink-500/20"
+                    >
+                      {doc.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <p className="mt-5 text-sm text-slate-400">
+                Carpeta: <span className="font-semibold text-pink-200">public/docs/{unidad.id}/</span>
+              </p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-12 rounded-[2rem] border border-pink-400/10 bg-white/5 p-8 text-slate-200 shadow-2xl shadow-pink-500/10">
+          <h4 className="text-2xl font-semibold text-white">¿Dónde subir mis documentos?</h4>
+          <p className="mt-4 text-slate-300">
+            Coloca tus archivos dentro de las carpetas correctas para que los enlaces funcionen y la página quede con la organización igual al ejemplo.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <div className="rounded-2xl border border-pink-500/10 bg-pink-500/10 p-4 text-sm text-pink-100">
+              <strong>Unidad 1</strong>
+              <p className="mt-2 text-slate-300">public/docs/unidad-1/</p>
+            </div>
+            <div className="rounded-2xl border border-pink-500/10 bg-pink-500/10 p-4 text-sm text-pink-100">
+              <strong>Unidad 2</strong>
+              <p className="mt-2 text-slate-300">public/docs/unidad-2/</p>
+            </div>
+            <div className="rounded-2xl border border-pink-500/10 bg-pink-500/10 p-4 text-sm text-pink-100">
+              <strong>Unidad 3</strong>
+              <p className="mt-2 text-slate-300">public/docs/unidad-3/</p>
+            </div>
+          </div>
+          <p className="mt-5 text-sm text-slate-400">
+            Si cambias el nombre de los archivos, actualiza los enlaces dentro de <code className="rounded bg-slate-900 px-1 py-0.5">app/page.tsx</code>.
+          </p>
         </div>
       </section>
-
-      {/* Footer elegante */}
-      <footer className="bg-tierra text-crema py-6 text-center font-sans mt-auto">
-        <p>© 2026 Francis Annet Velásquez Santos — Portafolio Ambiental</p>
-        <p className="text-sm text-arena">
-          Diseñado con Next.js + Tailwind CSS
-        </p>
-      </footer>
     </main>
   );
 }
