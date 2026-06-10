@@ -4,6 +4,7 @@ const unidades = [
   {
     id: "unidad-1",
     title: "Unidad 1",
+    image: "/docs/unidad-1/evaluacion-grupal.jpg",
     summary:
       "Esta unidad presenta los conceptos básicos de tecnologías limpias y cómo se aplican en procesos industriales para reducir residuos y consumo de energía.",
     temas: [
@@ -13,12 +14,20 @@ const unidades = [
     ],
     docs: [
       {
-        label: "Apuntes del cuaderno",
-        href: "/docs/unidad-1/apuntes-cuaderno.pdf",
+        label: "Cuaderno de Tecnologías Limpias",
+        href: "/docs/unidad-1/cuaderno-de-tecnologias-limpias.pdf",
       },
       {
-        label: "Evidencias de aprendizaje",
-        href: "/docs/unidad-1/evidencias-aprendizaje.pdf",
+        label: "Lectura PML",
+        href: "/docs/unidad-1/lectura-pml.pdf",
+      },
+      {
+        label: "Artículo BMy E y PML",
+        href: "/docs/unidad-1/articulo-bmye-pml.pdf",
+      },
+      {
+        label: "Línea de tiempo química y petroquímica",
+        href: "/docs/unidad-1/linea-tiempo-quimica-petroquimica.pdf",
       },
     ],
     groupWork: "Línea de tiempo química y petroquímica - primer trabajo grupal del Grupo 4",
@@ -26,6 +35,7 @@ const unidades = [
   {
     id: "unidad-2",
     title: "Unidad 2",
+    image: "/docs/unidad-2/grafico-balance-materia.png",
     summary:
       "En esta unidad se analiza el balance de materia y cómo optimizar recursos para construir procesos más eficientes y responsables.",
     temas: [
@@ -35,12 +45,20 @@ const unidades = [
     ],
     docs: [
       {
-        label: "Gráfico de balance de materia",
+        label: "Balance de materia",
         href: "/docs/unidad-2/balance-materia.pdf",
       },
       {
-        label: "Apuntes de clase",
-        href: "/docs/unidad-2/apuntes-clase.pdf",
+        label: "Ejercicios de balance por sector petroquímico",
+        href: "/docs/unidad-2/ejercicios-balance-petroquimico.pdf",
+      },
+      {
+        label: "IF segunda unidad tecnologías limpias",
+        href: "/docs/unidad-2/if-segunda-unidad-tecnologias-limpias.pdf",
+      },
+      {
+        label: "PL2 26",
+        href: "/docs/unidad-2/pl2-26.pptx",
       },
     ],
     groupWork: "Documento de análisis de balance de materia para Proyecto PL2",
@@ -57,12 +75,16 @@ const unidades = [
     ],
     docs: [
       {
-        label: "Diagrama de flujo de procesos",
-        href: "/docs/unidad-3/diagrama-flujo.pdf",
+        label: "Diagrama de flujo Flexicoking",
+        href: "/docs/unidad-3/diagrama-flujo-flexicoking.pdf",
       },
       {
-        label: "Resumen ISO 10628",
-        href: "/docs/unidad-3/iso-10628.pdf",
+        label: "Norma ISO 10628",
+        href: "/docs/unidad-3/iso-10628-diagramas-procesos.pdf",
+      },
+      {
+        label: "PL3.1",
+        href: "/docs/unidad-3/pl3-1.pdf",
       },
     ],
     groupWork: "PL3 – Diagramas de flujo de procesos",
@@ -131,6 +153,16 @@ export default function Home() {
                 <p className="text-sm font-semibold text-pink-100">Resumen rápido</p>
                 <p className="mt-3 text-slate-200">{unidad.summary}</p>
               </div>
+
+              {unidad.image && (
+                <div className="mt-6 overflow-hidden rounded-3xl border border-pink-400/10 bg-slate-950/90">
+                  <img
+                    src={unidad.image}
+                    alt={`Imagen de ${unidad.title}`}
+                    className="h-48 w-full object-cover"
+                  />
+                </div>
+              )}
 
               <div className="mt-6 space-y-3">
                 {unidad.temas.map((tema) => (
